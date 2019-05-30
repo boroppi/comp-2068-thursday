@@ -1,14 +1,15 @@
 const express = require("express");
+const path = require("path");
 
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send(`Hello World`);
-});
+// Our views path
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "pug");
+// our routes
 
-app.get("/about", (req, res) => {
-  res.send("I like long walks on the beach.");
-});
+const routes = require("./routes");
+app.use("/", routes);
 
 const port = process.env.PORT || 4000;
 
