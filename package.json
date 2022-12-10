@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/boroppi/comp-2068-thursday#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.17.3"
   }
 }
